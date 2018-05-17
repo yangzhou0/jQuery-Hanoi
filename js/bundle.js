@@ -68,7 +68,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 const HanoiGame = __webpack_require__(1);
-const HanoiView = __webpack_require__(2);
+const HanoiView = __webpack_require__(3);
 $( () => {
   const rootEl = $('.hanoi');
   const game = new HanoiGame();
@@ -151,7 +151,8 @@ module.exports = Game;
 
 
 /***/ }),
-/* 2 */
+/* 2 */,
+/* 3 */
 /***/ (function(module, exports) {
 
 class HanoiView{
@@ -162,8 +163,19 @@ class HanoiView{
   }
 
 
-  
+  setupTowers(){
+    let $pile1 = $('<ul>').addClass('pile');
+    let $pile2 = $('<ul>').addClass('pile');
+    let $pile3 = $('<ul>').addClass('pile');
+    for (let i = 1; i <= 3; i++ ){
+      let $disc = $('<li>').addClass('disc').data('num',i);
+      $pile1.append($disc);
+    }
+    this.$rootEl.append($pile1,$pile2,$pile3);
+  }
 }
+
+module.exports = HanoiView;
 
 
 /***/ })
