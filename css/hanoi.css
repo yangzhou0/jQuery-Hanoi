@@ -2,6 +2,43 @@ h1{
   text-align: center
 }
 
-.disc{
+.hanoi{
+  margin:auto;
+  display:flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.pile{
+  margin: 2px;
+  padding: 0;
+  display:flex;
+  flex-direction: column;
+  flex-wrap:wrap;
+  width:160px;
+  height:160px;
+  justify-content: center;
+  align-items: center;
   list-style: none;
+}
+
+.disc1{
+  width:2px;
+  height:10px;
+  border:2px solid black;
+  margin: 2px;
+}
+.disc2{
+  width:30px;
+  height:10px;
+  border:2px solid black;
+  margin: 2px;
+}
+.disc3{
+  width:40px;
+  height:10px;
+  border:2px solid black;
+  margin: 2px;
 }
