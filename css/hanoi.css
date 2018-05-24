@@ -23,7 +23,10 @@ h1{
   align-items: center;
   list-style: none;
   border-bottom: black solid 5px
+}
 
+.pile:hover{
+  border-bottom: blue solid 5px
 }
 
 .disc1{
@@ -32,6 +35,7 @@ h1{
   border:2px solid black;
   margin: auto;
   border-radius: 20px;
+  background :gray;
 }
 .disc2{
   width:140px;
@@ -39,6 +43,7 @@ h1{
   border:2px solid black;
   margin: auto;
   border-radius: 20px;
+  background:gray;
 }
 .disc3{
   width:180px;
@@ -46,5 +51,5 @@ h1{
   border:2px solid black;
   margin: auto;
   border-radius: 20px;
-
+  background:gray;
 }
