@@ -12,6 +12,7 @@ h1{
 }
 
 .pile{
+  cursor: pointer;
   margin: 2px;
   padding: 0;
   display:flex;
@@ -52,4 +53,11 @@ h1{
   margin: auto;
   border-radius: 20px;
   background:gray;
+}
+
+.selected{
+  border-bottom: red solid 5px
+}
+.selected:hover{
+  border-bottom: red solid 5px
 }
