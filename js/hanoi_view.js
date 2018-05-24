@@ -3,6 +3,7 @@ class HanoiView{
     this.game = game;
     this.$rootEl = $rootEl;
     this.setupTowers();
+    this.render();
   }
 
 
@@ -15,6 +16,10 @@ class HanoiView{
       $pile1.append($disc);
     }
     this.$rootEl.append($pile1,$pile2,$pile3);
+  }
+
+  render(){
+    
   }
 }
 

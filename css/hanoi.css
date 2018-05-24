@@ -17,28 +17,34 @@ h1{
   display:flex;
   flex-direction: column;
   flex-wrap:wrap;
-  width:160px;
-  height:160px;
+  width:200px;
+  height:200px;
   justify-content: center;
   align-items: center;
   list-style: none;
+  border-bottom: black solid 5px
+
 }
 
 .disc1{
-  width:2px;
-  height:10px;
+  width:100px;
+  height:45px;
   border:2px solid black;
-  margin: 2px;
+  margin: auto;
+  border-radius: 20px;
 }
 .disc2{
-  width:30px;
-  height:10px;
+  width:140px;
+  height:45px;
   border:2px solid black;
-  margin: 2px;
+  margin: auto;
+  border-radius: 20px;
 }
 .disc3{
-  width:40px;
-  height:10px;
+  width:180px;
+  height:45px;
   border:2px solid black;
-  margin: 2px;
+  margin: auto;
+  border-radius: 20px;
+
 }
