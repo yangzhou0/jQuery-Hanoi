@@ -12,7 +12,7 @@ class HanoiView {
     let game = this.game;
     let board = this;
     $("ul").on("click", function(e) {
-      if(!board.pileNum){
+      if(!board.pileNum && board.pileNum !== 0){
         let $selectedPile = $(e.currentTarget);
         let $discToMove = $selectedPile.children().first();
         board.pileNum = $selectedPile.data('pos');
@@ -20,6 +20,10 @@ class HanoiView {
       }
       else{
         let $destinationPileNum = $(e.currentTarget).data('pos');
+        game.move(board.pileNum,$destinationPileNum);
+
+        board.render();
+        board.pileNum = null;
       }
 
     });
