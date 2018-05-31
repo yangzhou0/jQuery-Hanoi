@@ -4,6 +4,7 @@ class HanoiView {
     this.$rootEl = $rootEl;
     this.setupTowers();
     this.clickTower();
+    this.render();
     this.fromNum;
     this.toNum;
   }
@@ -41,7 +42,18 @@ class HanoiView {
     }
   }
 
-  render() {}
+  render() {
+    $('li').remove();
+    for (let i = 0; i < this.game.towers.length; i++) {
+      for (let j = 0; j < this.game.towers[i].length; j ++){
+        let $disc = $("<li>")
+          .addClass(`disc${this.game.towers[i][j]}`)
+          .data("num", `${this.game.towers[i][j]}`);
+        $(`.hanoi ul:nth-child(${i+1})`).prepend($disc);
+      }
+    }
+  }
+  
 }
 
 module.exports = HanoiView;
