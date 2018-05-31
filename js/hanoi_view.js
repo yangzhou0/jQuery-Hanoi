@@ -19,20 +19,24 @@ class HanoiView {
         $selectedPile.addClass("selected");
       }
       else{
-        
+        let $destinationPile = $(e.currentTarget);
+
+        let $discToLandOn = $selectedPile.children().first();
       }
 
     });
   }
   setupTowers() {
-    let $pile1 = $("<ul>").addClass("pile");
-    let $pile2 = $("<ul>").addClass("pile");
-    let $pile3 = $("<ul>").addClass("pile");
-    for (let i = 1; i <= 3; i++) {
-      let $disc = $("<li>")
-        .addClass(`disc${i}`)
-        .data("num", i);
-      $pile1.append($disc);
+    let $pile1 = $("<ul>").addClass("pile").data('pos',0);
+    let $pile2 = $("<ul>").addClass("pile").data('pos',1);
+    let $pile3 = $("<ul>").addClass("pile").data('pos',2);
+    for (let i = 0; i < this.game.towers.length; i++) {
+      for (let j = 0; j < this.game.towers[i].length; j ++){
+        let $disc = $("<li>")
+          .addClass(`disc${this.game.towers[i][j]}`)
+          .data("num", i);
+        $pile1.prepend($disc);
+      }
     }
     this.$rootEl.append($pile1, $pile2, $pile3);
   }
