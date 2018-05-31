@@ -161,24 +161,21 @@ class HanoiView {
     this.setupTowers();
     this.clickTower();
     this.render();
-    this.fromNum;
-    this.toNum;
+    this.pileNum;
   }
 
   clickTower() {
     let game = this.game;
     let board = this;
     $("ul").on("click", function(e) {
-      if(!board.fromNum){
+      if(!board.pileNum){
         let $selectedPile = $(e.currentTarget);
         let $discToMove = $selectedPile.children().first();
-        board.fromNum = $discToMove.data('num');
+        board.pileNum = $selectedPile.data('pos');
         $selectedPile.addClass("selected");
       }
       else{
-        let $destinationPile = $(e.currentTarget);
-
-        let $discToLandOn = $selectedPile.children().first();
+        let $destinationPileNum = $(e.currentTarget).data('pos');
       }
 
     });
@@ -209,7 +206,7 @@ class HanoiView {
       }
     }
   }
-  
+
 }
 
 module.exports = HanoiView;
