@@ -3,17 +3,25 @@ class HanoiView {
     this.game = game;
     this.$rootEl = $rootEl;
     this.setupTowers();
-    this.render();
     this.clickTower();
     this.fromNum;
     this.toNum;
   }
 
   clickTower() {
+    let game = this.game;
+    let board = this;
     $("ul").on("click", function(e) {
-      let $selectedPile = $(e.currentTarget);
-      let $discToMove = $selectedPile.children().first();
-      $selectedPile.addClass("selected");
+      if(!board.fromNum){
+        let $selectedPile = $(e.currentTarget);
+        let $discToMove = $selectedPile.children().first();
+        board.fromNum = $discToMove.data('num');
+        $selectedPile.addClass("selected");
+      }
+      else{
+        
+      }
+
     });
   }
   setupTowers() {
