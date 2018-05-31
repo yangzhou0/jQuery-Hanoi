@@ -183,18 +183,18 @@ class HanoiView {
     });
   }
   setupTowers() {
-    let $pile1 = $("<ul>").addClass("pile").data('pos',0);
-    let $pile2 = $("<ul>").addClass("pile").data('pos',1);
-    let $pile3 = $("<ul>").addClass("pile").data('pos',2);
+    for (let i = 0; i < this.game.towers.length; i++){
+      let $pile = $("<ul>").addClass("pile").data('pos',i);
+      this.$rootEl.append($pile);
+    }
     for (let i = 0; i < this.game.towers.length; i++) {
       for (let j = 0; j < this.game.towers[i].length; j ++){
         let $disc = $("<li>")
           .addClass(`disc${this.game.towers[i][j]}`)
-          .data("num", i);
-        $pile1.prepend($disc);
+          .data("num", `${this.game.towers[i][j]}`);
+        $(`.hanoi ul:nth-child(${i+1})`).prepend($disc);
       }
     }
-    this.$rootEl.append($pile1, $pile2, $pile3);
   }
 
   render() {}
