@@ -28,6 +28,7 @@ class Game {
         this.towers[endTowerIdx].push(this.towers[startTowerIdx].pop());
         return true;
       } else {
+        alert('Invalid move try again.');
         return false;
       }
   }

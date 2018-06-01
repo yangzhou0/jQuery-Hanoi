@@ -20,7 +20,7 @@ h1{
   flex-wrap:wrap;
   width:200px;
   height:200px;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-end;
   list-style: none;
   border-bottom: black solid 5px
@@ -34,7 +34,7 @@ h1{
   width:100px;
   height:45px;
   border:2px solid black;
-  margin: auto;
+  margin: 0 auto;
   border-radius: 20px;
   background :gray;
 }
@@ -42,7 +42,7 @@ h1{
   width:140px;
   height:45px;
   border:2px solid black;
-  margin: auto;
+  margin: 0 auto;
   border-radius: 20px;
   background:gray;
 }
@@ -50,7 +50,7 @@ h1{
   width:180px;
   height:45px;
   border:2px solid black;
-  margin: auto;
+  margin: 0 auto;
   border-radius: 20px;
   background:gray;
 }
