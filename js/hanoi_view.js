@@ -21,8 +21,8 @@ class HanoiView {
       else{
         let $destinationPileNum = $(e.currentTarget).data('pos');
         game.move(board.pileNum,$destinationPileNum);
-
         board.render();
+        $('.selected').removeClass('selected');
         board.pileNum = null;
       }
 

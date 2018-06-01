@@ -21,7 +21,7 @@ h1{
   width:200px;
   height:200px;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   list-style: none;
   border-bottom: black solid 5px
 }
