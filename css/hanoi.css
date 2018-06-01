@@ -61,3 +61,7 @@ h1{
 .selected:hover{
   border-bottom: red solid 5px
 }
+
+.won{
+  background: green;
+}

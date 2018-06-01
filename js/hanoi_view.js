@@ -24,7 +24,12 @@ class HanoiView {
         board.render();
         $('.selected').removeClass('selected');
         board.pileNum = null;
+        if(game.isWon()){
+          alert('You won!');
+          $('li').addClass('won');
+        }
       }
+
 
     });
   }
